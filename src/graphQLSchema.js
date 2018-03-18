@@ -22,9 +22,16 @@ import {
 	gradesTypeDef
 } from './grades/typeDefs';
 
+import {
+	usersMutations,
+	usersQueries,
+	usersTypeDef
+} from './users/typeDefs';
+
 import studentsResolvers from './students/resolvers';
 import coursesResolvers from './courses/resolvers';
 import gradesResolvers from './grades/resolvers';
+import usersResolvers from './users/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -32,17 +39,20 @@ const mergedTypeDefs = mergeSchemas(
 		'scalar JSON',
 		studentsTypeDef,
 		coursesTypeDef,
-		gradesTypeDef
+		gradesTypeDef,
+		usersTypeDef
 	],
 	[
 		studentsQueries,
 		coursesQueries,
-		gradesQueries
+		gradesQueries,
+		usersQueries,
 	],
 	[
 		studentsMutations,
 		coursesMutations,
-		gradesMutations
+		gradesMutations,
+		usersMutations
 	]
 );
 
@@ -54,5 +64,6 @@ export default makeExecutableSchema({
 		studentsResolvers,
 		coursesResolvers,
 		gradesResolvers,
+		usersResolvers,
 	)
 });

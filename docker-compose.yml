@@ -14,5 +14,8 @@ services:
       GRADES_URL: '192.168.99.101'
       GRADES_PORT: '4002'
       GRADES_ENTRY: 'grades/'
+      USERS_URL: '192.168.99.101'
+      USERS_PORT: '3000'
+      USERS_ENTRY: 'sessions'
     ports:
       - '5000:5000'
