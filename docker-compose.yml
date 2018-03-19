@@ -3,19 +3,50 @@ services:
   academy-api:
     build: .
     environment:
-      PORT: '5000'
+      PORT: '4000'
       SHOW_URLS: 'true'
-      STUDENTS_URL: '192.168.99.101'
-      STUDENTS_PORT: '4000'
-      STUDENTS_ENTRY: 'students/'
-      COURSES_URL: '192.168.99.101'
-      COURSES_PORT: '4001'
-      COURSES_ENTRY: 'courses/'
-      GRADES_URL: '192.168.99.101'
-      GRADES_PORT: '4002'
-      GRADES_ENTRY: 'grades/'
-      USERS_URL: '192.168.99.101'
-      USERS_PORT: '3000'
+      USERS_PORT: '4001'
       USERS_ENTRY: 'sessions'
+      WALLETS_PORT: '4002'
+      WALLETS_ENTRY: 'wallets'
+      MATCHES_PORT: '4003'
+      MATCHES_ENTRY: 'matches'
+      TEAMS_PORT: '4003'
+      TEAMS_ENTRY: 'teams'
+      WINNERS_PORT: '4004'
+      WINNERS_ENTRY: 'winners'
+      RESULTS_PORT: '4005'
+      RESULTS_ENTRY: 'results'
+
+      # Examples
+      # STUDENTS_URL: '192.168.99.101'
+      # STUDENTS_PORT: '4000'
+      # STUDENTS_ENTRY: 'students/'
+      # COURSES_URL: '192.168.99.101'
+      # COURSES_PORT: '4001'
+      # COURSES_ENTRY: 'courses/'
+      # GRADES_URL: '192.168.99.101'
+      # GRADES_PORT: '4002'
+      # GRADES_ENTRY: 'grades/'
+      # USERS_URL: '192.168.99.101'
+
     ports:
-      - '5000:5000'
+      - '4000:4000'
+
+# conventions
+# api_gateway_ms 4000
+#
+# user_ms 4001
+# user_db 3009
+#
+# wallet_ms 4002
+# wallet_db 3010
+#
+# match_ms 4003
+# match_db 3011
+#
+# winner_ms 4004
+# winner_db 3012
+#
+# result_ms 4005
+# result_db 3013
