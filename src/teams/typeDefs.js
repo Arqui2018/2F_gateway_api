@@ -2,8 +2,6 @@ export const teamsTypeDef = `
 type Team {
     id: Int!
     name: String!
-    createdAt: String!
-    updatedAt: String!
 }
 `;
 

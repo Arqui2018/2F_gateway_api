@@ -39,6 +39,12 @@ import {
 	teamsTypeDef
 } from './teams/typeDefs';
 
+import {
+	resultsMutations,
+	resultsQueries,
+	resultsTypeDef
+} from './results/typeDefs';
+
 // examples
 // import studentsResolvers from './students/resolvers';
 // import coursesResolvers from './courses/resolvers';
@@ -46,7 +52,7 @@ import {
 import usersResolvers from './users/resolvers';
 import matchesResolvers from './matches/resolvers';
 import teamsResolvers from './teams/resolvers';
-
+import resultsResolvers from './results/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -58,6 +64,7 @@ const mergedTypeDefs = mergeSchemas(
 		usersTypeDef,
 		matchesTypeDef,
 		teamsTypeDef,
+		resultsTypeDef,
 	],
 	[
 		// studentsQueries,
@@ -66,12 +73,14 @@ const mergedTypeDefs = mergeSchemas(
 		usersQueries,
 		matchesQueries,
 		teamsQueries,
+		resultsQueries,
 	],
 	[
 		// studentsMutations,
 		// coursesMutations,
 		// gradesMutations,
-		usersMutations
+		usersMutations,
+		resultsMutations,
 	]
 );
 
@@ -86,5 +95,6 @@ export default makeExecutableSchema({
 		usersResolvers,
 		matchesResolvers,
 		teamsResolvers,
+		resultsResolvers,
 	)
 });
