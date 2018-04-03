@@ -1,13 +1,12 @@
 export const resultsTypeDef = `
 type Result {
-    id: Int!
+    id: Int
     user_id: Int!
     monto: Int!
     fecha: String!
     gol_1: Int!
     gol_2: Int!
     winner: Boolean!
-    lastname: String!
     partido_id: Int!
     wallet_id: Int!
 }
@@ -19,7 +18,6 @@ input ResultInput {
     gol_1: Int!
     gol_2: Int!
     winner: Boolean!
-    lastname: String!
     partido_id: Int!
     wallet_id: Int!
 }

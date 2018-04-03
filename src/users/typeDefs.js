@@ -18,8 +18,6 @@ input UserIntput {
   email: String!
   password: String!
 }
-
-
 `;
 
 export const usersQueries = `

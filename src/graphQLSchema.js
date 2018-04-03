@@ -4,25 +4,6 @@ import { makeExecutableSchema } from 'graphql-tools';
 
 import { mergeSchemas } from './utilities';
 
-// examples
-// import {
-// 	studentsMutations,
-// 	studentsQueries,
-// 	studentsTypeDef
-// } from './students/typeDefs';
-//
-// import {
-// 	coursesMutations,
-// 	coursesQueries,
-// 	coursesTypeDef
-// } from './courses/typeDefs';
-//
-// import {
-// 	gradesMutations,
-// 	gradesQueries,
-// 	gradesTypeDef
-// } from './grades/typeDefs';
-
 import {
 	usersMutations,
 	usersQueries,
@@ -51,10 +32,6 @@ import {
 	walletsTypeDef
 }from './wallets/typeDefs';
 
-// examples
-// import studentsResolvers from './students/resolvers';
-// import coursesResolvers from './courses/resolvers';
-// import gradesResolvers from './grades/resolvers';
 import usersResolvers from './users/resolvers';
 import matchesResolvers from './matches/resolvers';
 import teamsResolvers from './teams/resolvers';
@@ -65,9 +42,6 @@ import walletsResolvers from './wallets/resolvers';
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		// studentsTypeDef,
-		// coursesTypeDef,
-		// gradesTypeDef,
 		usersTypeDef,
 		matchesTypeDef,
 		teamsTypeDef,
@@ -75,9 +49,6 @@ const mergedTypeDefs = mergeSchemas(
 		walletsTypeDef,
 	],
 	[
-		// studentsQueries,
-		// coursesQueries,
-		// gradesQueries,
 		usersQueries,
 		matchesQueries,
 		teamsQueries,
@@ -86,9 +57,6 @@ const mergedTypeDefs = mergeSchemas(
 	],
 
 	[
-		// studentsMutations,
-		// coursesMutations,
-		// gradesMutations,
 		usersMutations,
 		resultsMutations,
 		walletsMutations,
@@ -100,9 +68,6 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		// studentsResolvers,
-		// coursesResolvers,
-		// gradesResolvers,
 		usersResolvers,
 		matchesResolvers,
 		teamsResolvers,

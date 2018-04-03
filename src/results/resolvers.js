@@ -9,9 +9,9 @@ const resolvers = {
     resultById: (_, { id }) => generalRequest(`${URL}/${id}`, 'GET'),
   },
   Mutation: {
-    createResult: (_, { result }) => generalRequest(`${URL}`, 'POST', result),
-    updateResult: (_, { id, result }) => generalRequest(`${URL}/${id}`, 'PUT', result),
-    deleteResult: (_, { id }) => generalRequest(`${URL}/${id}`, 'DELETE'),
+    createResult: (_, { result }) => generalRequest(`${URL}/`, 'POST', result),
+    updateResult: (_, { id, result }) => generalRequest(`${URL}/${id}/`, 'PUT', result),
+    deleteResult: (_, { id }) => generalRequest(`${URL}/${id}/`, 'DELETE'),
   },
 };
 
