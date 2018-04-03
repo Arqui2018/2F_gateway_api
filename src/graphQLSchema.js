@@ -45,6 +45,12 @@ import {
 	resultsTypeDef
 } from './results/typeDefs';
 
+import {
+	walletsMutations,
+	walletsQueries,
+	walletsTypeDef
+}from './wallets/typeDefs';
+
 // examples
 // import studentsResolvers from './students/resolvers';
 // import coursesResolvers from './courses/resolvers';
@@ -53,6 +59,7 @@ import usersResolvers from './users/resolvers';
 import matchesResolvers from './matches/resolvers';
 import teamsResolvers from './teams/resolvers';
 import resultsResolvers from './results/resolvers';
+import walletsResolvers from './wallets/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -65,6 +72,7 @@ const mergedTypeDefs = mergeSchemas(
 		matchesTypeDef,
 		teamsTypeDef,
 		resultsTypeDef,
+		walletsTypeDef,
 	],
 	[
 		// studentsQueries,
@@ -74,13 +82,16 @@ const mergedTypeDefs = mergeSchemas(
 		matchesQueries,
 		teamsQueries,
 		resultsQueries,
+		walletsQueries,
 	],
+
 	[
 		// studentsMutations,
 		// coursesMutations,
 		// gradesMutations,
 		usersMutations,
 		resultsMutations,
+		walletsMutations,
 	]
 );
 
@@ -96,5 +107,6 @@ export default makeExecutableSchema({
 		matchesResolvers,
 		teamsResolvers,
 		resultsResolvers,
+		walletsResolvers,
 	)
 });

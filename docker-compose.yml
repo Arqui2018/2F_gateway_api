@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2'
 services:
   academy-api:
     build: .
@@ -8,7 +8,7 @@ services:
       USERS_PORT: '4001'
       USERS_ENTRY: 'sessions'
       WALLETS_PORT: '4002'
-      WALLETS_ENTRY: 'wallets'
+      WALLETS_ENTRY: 'wallets/resources/wallet'
       MATCHES_PORT: '4003'
       MATCHES_ENTRY: 'matches'
       TEAMS_PORT: '4003'
