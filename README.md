@@ -159,7 +159,6 @@ mutation {
   }
 }
 
-
 mutation {
   deleteResult(id: 8) {
     id
@@ -175,6 +174,25 @@ mutation {
 }
 ```
 
+# Wallet
+
+```graphql
+query {
+  walletById(id: 2) {
+    id
+    balance
+  }
+}
+
+mutation {
+  updateWallet(id: 2, wallet: {
+    balance: 12
+  }) {
+    id
+    balance
+  }
+} 
+```
 
 # PORTS
 

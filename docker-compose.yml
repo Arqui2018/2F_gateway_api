@@ -7,7 +7,7 @@ services:
       SHOW_URLS: 'true'
       USERS_PORT: '4001'
       USERS_ENTRY: 'sessions'
-      WALLETS_PORT: '4002'
+      WALLETS_PORT: '4040'
       WALLETS_ENTRY: 'wallets/resources/wallet'
       MATCHES_PORT: '4003'
       MATCHES_ENTRY: 'matches'
