@@ -23,15 +23,16 @@ mutation {
 }
 
 query {
-  sessionByToken(token: "mawkjXZpxTayRsB6E6XT") {
+  sessionByToken(token: "59MxbaV9ukpuDXx5vCTX") {
     name
+    nickname
     email
+    wallet_id
     authentication_token
     created_at
     updated_at
   }
 }
-
 mutation {
   removeSession(token: "mawkjXZpxTayRsB6E6XT") {
     id
@@ -191,7 +192,7 @@ mutation {
     id
     balance
   }
-} 
+}
 ```
 
 # PORTS

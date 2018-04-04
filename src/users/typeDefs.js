@@ -1,9 +1,9 @@
 export const usersTypeDef = `
 type User {
-  id: Int!
   name: String!
-  nickname: String!
+  nickname: String
   email: String!
+  wallet_id: Int!
   authentication_token: String!
   created_at: String!
   updated_at: String!
