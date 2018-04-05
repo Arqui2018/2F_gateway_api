@@ -1,6 +1,6 @@
 version: '2'
 services:
-  academy-api:
+  bet-api:
     build: .
     environment:
       PORT: '4000'
