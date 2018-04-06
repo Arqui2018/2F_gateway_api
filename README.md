@@ -93,12 +93,12 @@ query {
 query {
   allResults {
     user_id
-    monto
-    fecha
-    gol_1
-    gol_2
+    amount
+    date
+    g_local
+    g_visit
     winner
-    partido_id
+    match_id
     wallet_id
   }
 }
@@ -106,12 +106,12 @@ query {
 query {
   resultById(id: 2) {
     user_id
-    monto
-    fecha
-    gol_1
-    gol_2
+    amount
+    date
+    g_local
+    g_visit
     winner
-    partido_id
+    match_id
     wallet_id
   }
 }
@@ -119,21 +119,21 @@ query {
 mutation {
   createResult(result: {
   	user_id: 18
-    monto: 5600
-    fecha: "2018-03-30T05:07:09.013046Z"
-    gol_1: 0
-    gol_2: 4
+    amount: 5600
+    date: "2018-03-30T05:07:09.013046Z"
+    g_local: 0
+    g_visit: 4
     winner: false
-    partido_id: 35
+    match_id: 35
     wallet_id: 6070
   }) {
     user_id
-    monto
-    fecha
-    gol_1
-    gol_2
+    amount
+    date
+    g_local
+    g_visit
     winner
-    partido_id
+    match_id
     wallet_id
   }
 }
@@ -141,21 +141,21 @@ mutation {
 mutation {
   updateResult(id: 2, result: {
   	user_id: 18
-    monto: 6666
-    fecha: "2018-03-30T05:07:09.013046Z"
-    gol_1: 0
-    gol_2: 4
+    amount: 6666
+    date: "2018-03-30T05:07:09.013046Z"
+    g_local: 0
+    g_visit: 4
     winner: false
-    partido_id: 35
+    match_id: 35
     wallet_id: 6070
   }) {
     user_id
-    monto
-    fecha
-    gol_1
-    gol_2
+    amount
+    date
+    g_local
+    g_visit
     winner
-    partido_id
+    match_id
     wallet_id
   }
 }
@@ -164,12 +164,12 @@ mutation {
   deleteResult(id: 8) {
     id
     user_id
-    monto
-    fecha
-    gol_1
-    gol_2
+    amount
+    date
+    g_local
+    g_visit
     winner
-    partido_id
+    match_id
     wallet_id
   }
 }

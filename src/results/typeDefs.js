@@ -1,25 +1,25 @@
 export const resultsTypeDef = `
 type Result {
-    id: Int
-    user_id: Int!
-    monto: Int!
-    fecha: String!
-    gol_1: Int!
-    gol_2: Int!
-    winner: Boolean!
-    partido_id: Int!
-    wallet_id: Int!
+  id: Int
+  user_id: Int!
+  amount: Int!
+  date: String!
+  g_local: Int!
+  g_visit: Int!
+  winner: Boolean!
+  match_id: Int!
+  wallet_id: Int!
 }
 
 input ResultInput {
-    user_id: Int!
-    monto: Int!
-    fecha: String!
-    gol_1: Int!
-    gol_2: Int!
-    winner: Boolean!
-    partido_id: Int!
-    wallet_id: Int!
+  user_id: Int!
+  amount: Int!
+  date: String!
+  g_local: Int!
+  g_visit: Int!
+  winner: Boolean!
+  match_id: Int!
+  wallet_id: Int!
 }
 `;
 
