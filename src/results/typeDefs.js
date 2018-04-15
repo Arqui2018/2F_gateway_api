@@ -14,10 +14,10 @@ type Result {
 input ResultInput {
   user_id: Int!
   amount: Int!
-  date: String!
+  date: String
   g_local: Int!
   g_visit: Int!
-  winner: Boolean!
+  winner: Boolean
   match_id: Int!
   wallet_id: Int!
 }
