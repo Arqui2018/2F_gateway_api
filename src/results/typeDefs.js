@@ -26,6 +26,8 @@ input ResultInput {
 export const resultsQueries = `
     allResults: [Result]!
     resultById(id: Int!): Result!
+    resultByUser(id: Int!): [Result]!
+    resultByMatch(id: Int!): [Result]!
 `;
 
 export const resultsMutations = `

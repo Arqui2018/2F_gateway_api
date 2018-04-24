@@ -7,6 +7,8 @@ const resolvers = {
   Query: {
     allResults: (_) => getRequest(URL, ''),
     resultById: (_, { id }) => generalRequest(`${URL}/${id}`, 'GET'),
+    resultByUser: (_, { id }) => generalRequest(`${URL}/users/${id}`, 'GET'),
+    resultByMatch: (_, { id }) => generalRequest(`${URL}/matches/${id}`, 'GET'),
   },
   Mutation: {
     createResult: (_, { result }) => generalRequest(`${URL}/`, 'POST', result),

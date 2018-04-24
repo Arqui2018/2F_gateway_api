@@ -116,6 +116,34 @@ query {
   }
 }
 
+query {
+  resultByUser(id: 2) {
+    id
+    user_id
+    amount
+    date
+    g_local
+    g_visit
+    winner
+    match_id
+    wallet_id
+  }
+}
+
+query {
+  resultByMatch(id: 123) {
+    id
+    user_id
+    amount
+    date
+    g_local
+    g_visit
+    winner
+    match_id
+    wallet_id
+  }
+}
+
 mutation {
   createResult(result: {
   	user_id: 18
