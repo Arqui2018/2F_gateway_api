@@ -27,4 +27,4 @@ services:
       # STUDENTS_ENTRY: 'students/'
 
     ports:
-      - '4000:4000'
+      - '4000:4000
