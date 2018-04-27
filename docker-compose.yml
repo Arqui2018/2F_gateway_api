@@ -3,7 +3,7 @@ services:
   bet-api:
     build: .
     environment:
-      PORT: '4000'
+      PORT: '5000'
       SHOW_URLS: 'true'
       USERS_URL: '18.233.69.134'
       USERS_PORT: '4001'
@@ -27,4 +27,4 @@ services:
       # STUDENTS_ENTRY: 'students/'
 
     ports:
-      - '4000:4000
+      - '5000:5000
