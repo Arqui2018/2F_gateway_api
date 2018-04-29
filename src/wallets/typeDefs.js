@@ -14,5 +14,6 @@ export const walletsQueries = `
 `;
 
 export const walletsMutations = `
+    createWallet(wallet: WalletInput!): Wallet!
     updateWallet(id: Int!, wallet: WalletInput!): Wallet!
 `;
