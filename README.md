@@ -225,6 +225,13 @@ mutation {
     balance
   }
 }
+
+mutation {
+  createWallet(wallet: { balance: 100000 }) {
+    id
+    balance
+  }
+}
 ```
 
 # PORTS
