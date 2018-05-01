@@ -1,10 +1,14 @@
 # sa_academy_api
 
-API Gateway
 
-* JavaScript
-* Node.js
-* GraphQL
+# users
+
+* cristian@bet.com.co
+* jhon@bet.com.co
+* dago@bet.com.co
+* camilo@bet.com.co
+
+All users have the password: `123456`
 
 
 # Microservices GraphQL

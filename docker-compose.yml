@@ -9,7 +9,7 @@ services:
       USERS_PORT: '4001'
       USERS_ENTRY: 'sessions'
       WALLETS_URL: '35.194.70.72'
-      WALLETS_PORT: '4040'
+      WALLETS_PORT: '4004'
       WALLETS_ENTRY: 'wallets/resources/wallet'
       MATCHES_URL: '52.41.9.11'
       MATCHES_PORT: '4003'
