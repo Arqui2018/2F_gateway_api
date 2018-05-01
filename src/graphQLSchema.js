@@ -32,11 +32,17 @@ import {
 	walletsTypeDef
 }from './wallets/typeDefs';
 
+import {
+  authMutations,
+  authTypeDef
+} from './auth/typeDefs';
+
 import usersResolvers from './users/resolvers';
 import matchesResolvers from './matches/resolvers';
 import teamsResolvers from './teams/resolvers';
 import resultsResolvers from './results/resolvers';
 import walletsResolvers from './wallets/resolvers';
+import authResolvers from './auth/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -47,6 +53,7 @@ const mergedTypeDefs = mergeSchemas(
 		teamsTypeDef,
 		resultsTypeDef,
 		walletsTypeDef,
+		authTypeDef
 	],
 	[
 		usersQueries,
@@ -60,6 +67,7 @@ const mergedTypeDefs = mergeSchemas(
 		usersMutations,
 		resultsMutations,
 		walletsMutations,
+		authMutations
 	]
 );
 
@@ -73,5 +81,6 @@ export default makeExecutableSchema({
 		teamsResolvers,
 		resultsResolvers,
 		walletsResolvers,
+		authResolvers
 	)
 });
