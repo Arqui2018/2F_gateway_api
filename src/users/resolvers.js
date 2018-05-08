@@ -1,15 +1,15 @@
-import { generalRequest, getRequest } from '../utilities';
+import { generalRequestSOAP } from '../utilities';
 import { url, port, entryPoint } from './server';
 
 const URL = `http://${url}:${port}/${entryPoint}`;
 
 const resolvers = {
   Query: {
-    sessionByToken: (_, { token }) => generalRequest(`${URL}/${token}`, 'GET'),
+    sessionByToken: (_, token) => generalRequestSOAP(`${URL}`, 'showSession', token),
   },
   Mutation: {
-    createSession: (_, { user }) => generalRequest(`${URL}`, 'POST', user),
-    removeSession: (_, { token }) => generalRequest(`${URL}/${token}`, 'DELETE'),
+    createSession: (_, { user }) => generalRequestSOAP(`${URL}`, 'createSession', user),
+    destroySession: (_, token) => generalRequestSOAP(`${URL}`, 'destroySession', token),
   },
 };
 

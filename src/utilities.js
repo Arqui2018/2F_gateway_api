@@ -1,6 +1,6 @@
 import request from 'request-promise-native';
 import { formatError } from 'graphql';
-
+import soap from 'soap';
 /**
  * Creates a request following the given parameters
  * @param {string} url
@@ -19,13 +19,38 @@ export async function generalRequest(url, method, body, fullResponse) {
 		json: true,
 		resolveWithFullResponse: fullResponse
 	};
-	if (process.env.SHOW_URLS) {
-		// eslint-disable-next-line
-		console.log(url);
-	}
 
 	try {
 		return await request(parameters);
+	} catch (err) {
+		return err;
+	}
+}
+
+/**
+ * Adds parameters to a given route
+ * @param {string} url
+ * @param {string} method
+ */
+
+export async function generalRequestSOAP(url, method, body) {
+
+	url = encodeURI(url);
+	const args = {};
+	Object.keys(body).forEach(key => {
+		args[key] = body[key];
+	});
+
+	try {
+		const client = await soap.createClientAsync(url);
+		let result = await client[`${method}Async`](args);
+		// clean data
+		result = result[0];
+		Object.keys(result).forEach(key => {
+			result[key] = result[key]['$value'];
+		});
+
+		return result;
 	} catch (err) {
 		return err;
 	}

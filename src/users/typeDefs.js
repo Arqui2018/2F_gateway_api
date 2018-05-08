@@ -5,14 +5,13 @@ type User {
   nickname: String
   email: String!
   wallet_id: Int!
-  authentication_token: String!
-  created_at: String!
-  updated_at: String!
+  autentication: Boolean!
 }
 
 type AuthPayload {
   email: String!
   authentication_token: String!
+  autentication: Boolean!
 }
 
 input UserIntput {
@@ -27,5 +26,5 @@ export const usersQueries = `
 
 export const usersMutations = `
   createSession(user: UserIntput!): AuthPayload!
-  removeSession(token: String!): User!
+  destroySession(token: String!): User!
 `;
