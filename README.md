@@ -18,28 +18,31 @@ All users have the password: `123456`
 * request
 ```graphql
 mutation {
-  createSession(user: {
-    email: "example@example.com"
-    password: "123456"
-  }) {
-    authentication_token
-  }
+    createSession(user: {
+      email: "camilo@bet.com.co"
+      password: "123456"
+    }) {
+      email
+      authentication_token
+      autentication
+    }
 }
 
 query {
-  sessionByToken(token: "59MxbaV9ukpuDXx5vCTX") {
+  sessionByToken(token: "7bb5b9B3Zqy2YB_sxdbm") {
+    id
     name
-    nickname
     email
+    nickname
     wallet_id
-    authentication_token
-    created_at
-    updated_at
+    autentication
   }
 }
+
 mutation {
-  removeSession(token: "mawkjXZpxTayRsB6E6XT") {
+  destroySession(token: "kwxvP3sa8myRJ3QY-Uzp") {
     id
+    autentication
   }
 }
 ```
