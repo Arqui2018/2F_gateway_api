@@ -1,6 +1,8 @@
-import request from 'request-promise-native';
 import { formatError } from 'graphql';
+import request from 'request-promise-native';
 import soap from 'soap';
+
+
 /**
  * Creates a request following the given parameters
  * @param {string} url
@@ -11,7 +13,6 @@ import soap from 'soap';
  */
 
 export async function generalRequest(url, method, body, fullResponse) {
-	// authorization
 	const parameters = {
 		method,
 		uri: encodeURI(url),
@@ -28,9 +29,11 @@ export async function generalRequest(url, method, body, fullResponse) {
 }
 
 /**
- * Adds parameters to a given route
+ * Creates a request with SOAP, following the given parameters
  * @param {string} url
  * @param {string} method
+ * @param {object} [body]
+ * @return {Promise.<*>} - promise with the error or the response object
  */
 
 export async function generalRequestSOAP(url, method, body) {
@@ -62,6 +65,7 @@ export async function generalRequestSOAP(url, method, body) {
  * @param {object} parameters
  * @return {string} - url with the added parameters
  */
+ 
 export function addParams(url, parameters) {
 	let queryUrl = `${url}?`;
 	for (let param in parameters) {
